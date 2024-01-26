@@ -484,7 +484,7 @@ span{
 
 .sobre{
   top: 40.1rem;
-  height: 90vh;
+  height: 100vh;
   background-size: auto 100%;
   padding: 0;
 }
@@ -649,9 +649,10 @@ iframe{
 }
 
 .btn_contato{
-  width: 10rem;
-  padding-left:10px;
+  width: 12rem;
+  padding-left:0px;
   font-weight: 500;
+  text-align: center;
 }
 
 .link_btn_contato{
@@ -668,6 +669,7 @@ iframe{
   height: 45vh;
   top: 50.9rem;
   width: 100%;
+  padding-bottom: 2rem;
 }
 
 .ocultar{
