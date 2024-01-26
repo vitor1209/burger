@@ -460,24 +460,24 @@ li {
 }
 
 .menu{
-  line-height: 8px;
+  line-height: 10px;
   padding: 0 40px;
 }
 
 .titulo h2{
-  font-size: 31px;
+  font-size: 20px;
   font-weight: 400;
   line-height: 1.1;
   top: 19.7rem;
 }
 
 span{
-  font-size: 55px;
+  font-size: 30px;
 }
 
 .linha{
   margin: 20px auto 50px;
-  width: 190px;
+  width: 130px;
   max-width: 90%;
   top: 19rem;
 }
@@ -494,11 +494,12 @@ span{
   height: 100%;
   padding-left: 30px;
   padding-right: 20px;
-  padding-top: 40px;
+  padding-top: 0px;
+  padding-bottom: 10px;
 } 
 
 .local{
-  height: 45vh;
+  height: 58vh;
   top: 40.1rem;
   width: 100%;
   padding: 0;
@@ -515,55 +516,55 @@ span{
   left: 25px;
   margin-top: 50px;
   font-weight: 900;
-  top: 0.5rem;
+  top: -1.5rem;
 } 
 
 .local .ENDEREÇO-r{
   position: relative;
   left: 30px;
   margin-bottom: 40px;
-  top: 0.3rem;
+  top: -1.7rem;
 }
 
 .local .HORÁRIOS{
   left: 20px;
-  top: -0.2rem;
+  top: 0.8rem;
   font-weight: 900;
 }
 
 .local .HORÁRIOS-r{
   margin-bottom: 40px;
-  top: -0.4rem;
+  top: 0.4rem;
   left: 20px;
 }
 
 .local .TELEFONE-r{
   right: -20px;
   margin-bottom: 50px;
-  top: -0.3rem;
+  top: 2.3rem;
 }
 
 .local .TELEFONE{
   left: 25px;
-  top: -0.1rem;
+  top: 2.3rem;
   font-weight: 900;
 }
 
 .Cardápio{
-  height: 60vh;
+  height: 75vh;
   top: 38.8rem;
   width: 100%;
 }
 
  .Cardápio img{
-  height: 60vh;
+  height: 75vh;
   width: 100%;
   background-size: cover;
   }
   
   .txt_cardapio{
     text-align: center;
-    top: 8rem;
+    top: 12rem;
   }
   
   .txt_cardapio h3{
@@ -575,6 +576,7 @@ span{
     font-size: 16px;
     letter-spacing: 2.5px;
     line-height: 1.4;
+    font-weight: 700;
   }
   
 .txt_cardapio p{
@@ -587,28 +589,26 @@ span{
   
 .sobrepor_cardapio{
   width: 100%;
-  height: 60vh;
+  height: 75vh;
 }
   
   .btn-cardapio{
-    width: 8rem;
-    left: 8.5rem;
+    width: 10rem;
+    left: 7rem;
     top: 1rem;
-    border: 2px solid #fff;
+    font-weight: 500;
   }
   
   .link-btn-cardapio{
-  
     display: block;
-      width: 9.7rem;
-      padding-left:10px;
-
+    width: 9.7rem;
+    padding-left:10px;
   }
   
   .btn-cardapio:hover{
     background-color: #fff;
     color: black;
-    transition: all 0.8s ease-in-out;
+    transition: all 0.2s ease-in-out;
   }
   
   .link-btn-cardapio a{
@@ -629,6 +629,7 @@ span{
 .txt-contato{
   left: 5rem;
   top: 7rem;
+  width: 300px;
 }
 
 .txt-contato b{
@@ -648,8 +649,9 @@ iframe{
 }
 
 .btn_contato{
-  width: 9.7rem;
+  width: 10rem;
   padding-left:10px;
+  font-weight: 500;
 }
 
 .link_btn_contato{
@@ -663,8 +665,8 @@ iframe{
 }
 
 .footer{
-  height: 42vh;
-  top: 50.8rem;
+  height: 45vh;
+  top: 50.9rem;
   width: 100%;
 }
 
