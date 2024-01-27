@@ -34,18 +34,71 @@ li {
   font-size: 1.1rem; 
 }
 
+
+.btn-menu{
+  cursor: pointer;
+  display: none;
+}
+
+.btn-menu div{
+  width: 32px;
+  height: 2px;
+  background: #fff;
+  margin: 8px;
+}
+
+
+.btn-menu-x{
+  cursor: pointer;
+  display: none;
+}
+
+.btn-menu-x .linha1{
+  width: 32px;
+  height: 2px;
+  background: #fff;
+  margin: 8px;
+  transform: rotate(45deg);
+}
+
+.btn-menu-x .linha2{
+  width: 32px;
+  height: 2px;
+  background: #fff;
+  margin: 8px;
+  transform: rotate(135deg);
+}
+
 .menu{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-}
-
-.menu{
   line-height: 30px;
   background: rgba(0, 0, 0, 0.5);
   padding: 0 80px;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.menu_mobile{
+  position: absolute;
+  right: 5rem;
+  top: 70px;
+  width: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden; 
+  display: none;
+  height: 200px;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.menu_mobile li{
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 nav{
@@ -442,7 +495,7 @@ iframe{
     position: absolute;
     top: 0;
     left: 0;
-    width: 412px;
+    width: 100%;
     height: 100vh;
     object-fit: cover;
     z-index: -2;
@@ -457,11 +510,96 @@ li {
   font-size: 1rem; 
   margin-right: 3rem;
   left: 120px;
+  display: block;
+}
+
+ul {
+  display: none;
 }
 
 .menu{
-  line-height: 10px;
+  line-height: 12px;
   padding: 0 40px;
+}
+
+
+.btn-menu{
+  display: block;
+  top: 0.5rem;
+  right: 1.3rem;
+  position: absolute;     
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn-menu div{
+  width: 38px;
+  height: 5px;
+  background: #fff;
+  margin: 8px;
+  border-radius: 10px;
+}
+
+.btn-menu-x{
+  cursor: pointer;
+  display: none;
+  -webkit-tap-highlight-color: transparent;
+  position: absolute;   
+  top: 1rem;
+  right: 1rem;
+}
+
+.btn-menu-x .linha1{
+  width: 38px;
+  height: 5px;
+  background: #fff;
+  margin: 8px;
+  transform: rotate(45deg);
+  top: 28px;
+  right: 1rem;
+  position: relative;
+  border-radius: 10px;
+}
+
+.btn-menu-x .linha2{
+  width: 38px;
+  height: 5px;
+  background: #fff;
+  margin: 8px;
+  transform: rotate(135deg);
+  top: 1rem;
+  right: 1rem;
+  position: relative;
+  border-radius: 10px;
+}
+
+.abrir{
+  display: block;
+  height: 200px;
+}
+
+.menu_mobile .abrir{
+  display: block; 
+}
+
+.open {
+  display: flex;
+  overflow-x: hidden;
+}
+
+body.fixo{
+  overflow: hidden;
+}
+
+.fechar{
+  display: none;
+} 
+
+.remover{
+  display: none;
+}
+
+.itemremover{
+  display: none;
 }
 
 .titulo h2{
@@ -484,7 +622,7 @@ span{
 
 .sobre{
   top: 40.1rem;
-  height: 100vh;
+  height: 110vh;
   background-size: auto 100%;
   padding: 0;
 }
@@ -527,7 +665,7 @@ span{
 }
 
 .local .HORÁRIOS{
-  left: 20px;
+  left: 30px;
   top: 0.8rem;
   font-weight: 900;
 }
@@ -535,7 +673,8 @@ span{
 .local .HORÁRIOS-r{
   margin-bottom: 40px;
   top: 0.4rem;
-  left: 20px;
+  left: 30px;
+  width: 350px;
 }
 
 .local .TELEFONE-r{
@@ -615,7 +754,6 @@ span{
     width: 11.4rem;
   }
   
-
 .contato{
   height: 50vh;
   top: 34.9rem;
@@ -649,7 +787,7 @@ iframe{
 }
 
 .btn_contato{
-  width: 12rem;
+  width: 14rem;
   padding-left:0px;
   font-weight: 500;
   text-align: center;
@@ -669,7 +807,7 @@ iframe{
   height: 45vh;
   top: 50.9rem;
   width: 100%;
-  padding-bottom: 2rem;
+  padding-bottom: 2.5rem;
 }
 
 .ocultar{

@@ -47,6 +47,62 @@ html{
     padding: 0 80px;
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
   }
+
+  .btn-menu{
+    cursor: pointer;
+    display: none;
+  }
+  
+  .btn-menu div{
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+  }
+  
+  
+  .btn-menu-x{
+    cursor: pointer;
+    display: none;
+  }
+  
+  .btn-menu-x .linha1{
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transform: rotate(45deg);
+  }
+  
+  .btn-menu-x .linha2{
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transform: rotate(135deg);
+  }
+
+  .menu_mobile{
+    position: absolute;
+    right: 5rem;
+    top: 70px;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden; 
+    display: none;
+    height: 200px;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .menu_mobile li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   nav{
     display: flex;
     flex-direction: row;
@@ -111,16 +167,15 @@ html{
     position: relative;
   }
 
-  .contato{
-    height: 65vh;
-    background-color: black;
-    position: relative;
-    top: 10.6rem;
-  }
+.contato{
+  height: 65vh;
+  background-color: black;
+  position: relative;
+  top: 10.6rem;
+}
 
 .informaçoes{
   padding: 0.8rem;
-
  }
 
  .caixa-info{
@@ -136,7 +191,6 @@ html{
   letter-spacing: 2px;
   text-transform: uppercase;
  }
-
 
  .caixa-info input{
   background-color: rgb(0, 0, 0);
@@ -302,4 +356,262 @@ html{
   display: block;
   bottom: -13.5rem;
   z-index: 2;
+}
+
+@media screen and (max-width: 600px){
+
+  .img_fundo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    z-index: -2;
+  }
+
+  .menu a{
+    font-size: 16px;
+    line-height: 1.2rem;
+}
+
+li {
+  font-size: 1rem; 
+  margin-right: 3rem;
+  left: 120px;
+  display: block;
+}
+
+ul {
+  display: none;
+}
+
+.menu{
+  line-height: 12px;
+  padding: 0 40px;
+}
+
+.btn-menu{
+  display: block;
+  top: 0.5rem;
+  right: 1.3rem;
+  position: absolute;     
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn-menu div{
+  width: 38px;
+  height: 5px;
+  background: #fff;
+  margin: 8px;
+  border-radius: 10px;
+}
+
+.btn-menu-x{
+  cursor: pointer;
+  display: none;
+  -webkit-tap-highlight-color: transparent;
+  position: absolute;   
+  top: 1rem;
+  right: 1rem;
+}
+
+.btn-menu-x .linha1{
+  width: 38px;
+  height: 5px;
+  background: #fff;
+  margin: 8px;
+  transform: rotate(45deg);
+  top: 28px;
+  right: 1rem;
+  position: relative;
+  border-radius: 10px;
+}
+
+.btn-menu-x .linha2{
+  width: 38px;
+  height: 5px;
+  background: #fff;
+  margin: 8px;
+  transform: rotate(135deg);
+  top: 1rem;
+  right: 1rem;
+  position: relative;
+  border-radius: 10px;
+}
+
+.abrir{
+  display: block;
+  height: 200px;
+}
+
+.menu_mobile .abrir{
+  display: block; 
+}
+
+.open {
+  display: flex;
+  overflow-x: hidden;
+}
+
+body.fixo{
+  overflow: hidden;
+}
+
+.fechar{
+  display: none;
+} 
+
+.remover{
+  display: none;
+}
+
+.itemremover{
+  display: none;
+}
+
+.titulo h2{
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.1;
+  top: 5rem;
+}
+
+span{
+  font-size: 30px;
+}
+
+.linha{
+  margin: 20px auto 50px;
+  width: 130px;
+  max-width: 90%;
+  top: 5rem;
+}
+
+.contato{
+  height: 65vh;
+  top: 6.7rem;
+}
+
+.informaçoes{
+  padding: 2.5rem;
+ }
+
+ .caixa-info{
+  margin-bottom: 1rem;
+ }
+
+ label{
+  font-size: 14px;
+  letter-spacing: 2px;
+  position: relative;
+  bottom: 0.5rem;
+  top: 0.5rem;
+  letter-spacing: 3px;
+ }
+
+ .caixa-info input{
+  font-size: 16px;
+  padding: 6px 10px;
+  line-height: 1.3;
+ }
+
+ .primeiro-nome{
+  width: 100%;
+  height: 35px;
+  left: auto;
+  margin-right: auto;
+  top: 0rem;
+ }
+
+ .nome_nome1{
+  left: auto;
+  top: auto;
+ }
+
+ .segundo-nome{
+  width: 100%;
+  height: 35px;
+  left: auto;
+  top: 0rem;
+ }
+
+ .nome_sobrenome{
+  left: auto;
+  top: auto;
+ }
+
+ .email{
+  margin-right: 1.3%;
+  top: -1rem;
+  width: 100%;
+  height: 35px;
+  left: auto;
+  top: 0rem;
+ }
+
+.nome_email{
+  left: auto;
+  top: auto;
+ }
+
+ .numero{
+  top: -6.15rem;
+  width: 100%;
+  height: 35px;
+  left: auto;
+  top: 0rem;
+ }
+
+ .nome_telefone{
+  left: auto;
+  top: auto;
+ }
+
+ .mensagem{
+  width: 100%;  
+  height: 110px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 6px;
+  padding-bottom: 4px;
+  top: auto;
+ }
+
+ 
+ textarea{
+  font-size: 18px;
+  line-height: 1.3; 
+  left: auto;
+  width: 49.5%;   
+ }
+
+
+ .nome_mensagem{
+  left: auto;
+  top: auto;
+ }
+
+ .enviar{
+  height: 3rem;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  left: auto;
+  width: 107%; 
+  top: auto;
+ }
+
+ .footer{
+  height: 45vh;
+  top: 5.4rem;
+  width: 100%;
+  padding-bottom: 2.5rem;
+}
+
+.linha_div_footer{
+  bottom: -9rem;
+  z-index: 2;
+}
+
 }
