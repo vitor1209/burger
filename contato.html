@@ -8,6 +8,22 @@
     <title>Contato</title>
 </head>
 <body>
+
+    <div class="btn-menu" onclick="aparecer()">
+
+        <div class="linha1"></div>
+        <div class="linha2"></div>
+        <div class="linha3"></div>
+
+    </div>
+
+    <div class="btn-menu-x" onclick="aparecer()">
+
+      <div class="linha1"></div>
+      <div class="linha2"></div>
+  </div>
+
+
     <div class="menu">
         <nav>
             <h1>
@@ -36,7 +52,29 @@
                 </li>
             </ul>
         </nav>
+        
     </div>
+
+    <div class="menu_mobile">
+        <li>
+            <a href="#ir-sobre">
+              A hamburgueria
+        </a>
+        </li>
+
+        <li>
+            <a href="#ir-Cardápio">
+             Cardápio
+        </a>
+        </li>
+
+        <li>
+            <a href="#ir_contato">
+             Contato
+        </a>
+        </li>
+    </div>
+    
 
     <div class="fundo">
 
@@ -64,6 +102,7 @@
         <form action="https://api.sheetmonkey.io/form/75CjHrymAcCjJPL31WzJTj" method="POST">
 
         <div class="informaçoes">
+
             <div class="nome_linha">
                 <div class="caixa-info">
                 <label for="primeiro-nome" class="nome_nome1">Primeiro nome</label> <br>
@@ -91,7 +130,7 @@
 
         </div>
            
-        </div>
+        
 
          
         <div class="caixa-info">
@@ -99,9 +138,13 @@
             <textarea class="mensagem" type="text" name="mensagem" placeholder="Digite sua avaliação" required></textarea>
         </div>
 
+ 
+
 <a href="mensagem recebida.html">
         <input class="enviar" type="submit" value="Enviar">
     </a>
+
+</div>
     
     </form>
 
@@ -136,4 +179,5 @@
     </div>
 
 </body>
+<script src="main.js"></script>
 </html>
