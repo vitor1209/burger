@@ -489,7 +489,7 @@ span{
 }
 
 .contato{
-  height: 80vh;
+  height: 77vh;
   top: 6.7rem;
 }
 
@@ -517,7 +517,7 @@ span{
  }
 
  .primeiro-nome{
-  width: 100%;
+  width: 93%;
   height: 35px;
   left: auto;
   margin-right: auto;
@@ -530,7 +530,7 @@ span{
  }
 
  .segundo-nome{
-  width: 100%;
+  width: 93%;
   height: 35px;
   left: auto;
   top: 0rem;
@@ -544,7 +544,7 @@ span{
  .email{
   margin-right: 1.3%;
   top: -1rem;
-  width: 100%;
+  width: 93%;
   height: 35px;
   left: auto;
   top: 0rem;
@@ -557,7 +557,7 @@ span{
 
  .numero{
   top: -6.15rem;
-  width: 100%;
+  width: 93%;
   height: 35px;
   left: auto;
   top: 0rem;
@@ -569,7 +569,7 @@ span{
  }
 
  .mensagem{
-  width: 100%;  
+  width: 93%;
   height: 110px;
   padding-left: 10px;
   padding-right: 10px;
@@ -598,7 +598,7 @@ span{
   font-weight: 900;
   letter-spacing: 1.5px;
   left: auto;
-  width: 107%; 
+  width: 100%;
   top: auto;
  }
 
