@@ -1,48 +1,50 @@
 // selecionar todos os elementos que eu quero ocultar e amarzenar na variavel ocultar
-const ocultar = document.querySelectorAll(".ocultar")
+const ocultar = document.querySelectorAll(".ocultar");
 
 //observador se ver a tela o elemento aparece se nao some 
 const observador = new IntersectionObserver( (info) =>{
  info.forEach( (dados) => {
   if(dados.isIntersecting){
-    dados.target.classList.add("aparecer")
+    dados.target.classList.add("aparecer");
   } 
  })
 })   
 
 //fazer uma lista dos elementos e passar pelo observador
-ocultar.forEach((Element) => observador.observe(Element))
+ocultar.forEach((Element) => observador.observe(Element));
 
 // btn menu para celular
 
-function aparecer(){
-  let Menu = document.querySelector('.menu');
-  let btnx = document.querySelector(".btn-menu-x")
-  let btn1 = document.querySelector(".btn-menu")
-  let corpo = document.querySelector(".conteiner")
+// Seleciona os botões menu e menu-x utilizando querySelector
+const btnMenu = document.querySelector('.btn-menu');
+const btnMenuX = document.querySelector('.btn-menu-x');
+const menuMobile = document.querySelector('.menu_mobile');
 
-  if (Menu.classList.contains('open')) {
+let estaAberto = false;
 
-      Menu.classList.remove('open');
-      btn1.classList.remove('fechar');
-      btnx.classList.remove('abrir');
-      corpo.classList.remove('remover');
-      remov.classList.remove('remover')
-  } 
-  else{
-      Menu.classList.add('open');
-      btn1.classList.add('fechar');
-      btnx.classList.add('abrir');
-      corpo.classList.add('remover');
-      remov.classList.add('remover')
+function aparecer() {
+  if (!estaAberto) {
+    menuMobile.classList.add('visible');
+    btnMenu.style.display = 'none';
+    btnMenuX.style.display = 'block';
+    menuMobile.style.display = 'block'; 
+    estaAberto = true;
+  } else {
+    menuMobile.classList.remove('visible');
+    btnMenu.style.display = 'block';
+    btnMenuX.style.display = 'none';
+    menuMobile.style.display = 'none';
+    estaAberto = false;
   }
-  //fixar tela//
-  document.body.classList.toggle('fixo') 
-
+  document.addEventListener('scroll', () => {
+    menuMobile.classList.remove('visible');
+    btnMenu.style.display = 'block';
+    btnMenuX.style.display = 'none';
+    menuMobile.style.display = 'none';
+    estaAberto = false;
+  })
 }
-const btn1 = document.querySelector(".btn-menu")
-const menu_mobile = document.querySelector(".menu_mobile")
 
-btn1.onclick = function (){
-  menu_mobile.classList.toggle(".abrir")
-}
+btnMenu.addEventListener('click', aparecer);
+btnMenuX.addEventListener('click', aparecer);
+
