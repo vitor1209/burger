@@ -15,36 +15,32 @@ ocultar.forEach((Element) => observador.observe(Element));
 
 // btn menu para celular
 
-// Seleciona os botões menu e menu-x utilizando querySelector
+// Seleciona os elementos do menu utilizando querySelector
 const btnMenu = document.querySelector('.btn-menu');
 const btnMenuX = document.querySelector('.btn-menu-x');
 const menuMobile = document.querySelector('.menu_mobile');
 
+// Variável para controlar o estado do menu
 let estaAberto = false;
 
-function aparecer() {
-  if (!estaAberto) {
-    menuMobile.classList.add('visible');
-    btnMenu.style.display = 'none';
-    btnMenuX.style.display = 'block';
-    menuMobile.style.display = 'block'; 
-    estaAberto = true;
-  } else {
-    menuMobile.classList.remove('visible');
-    btnMenu.style.display = 'block';
-    btnMenuX.style.display = 'none';
-    menuMobile.style.display = 'none';
-    estaAberto = false;
-  }
-  document.addEventListener('scroll', () => {
-    menuMobile.classList.remove('visible');
-    btnMenu.style.display = 'block';
-    btnMenuX.style.display = 'none';
-    menuMobile.style.display = 'none';
-    estaAberto = false;
-  })
+// Função para alternar a visibilidade do menu
+function toggleMenu() {
+  estaAberto = !estaAberto; 
+  menuMobile.classList.toggle('visible'); 
+  btnMenu.style.display = estaAberto ? 'none' : 'block';
+  btnMenuX.style.display = estaAberto ? 'block' : 'none';
+  menuMobile.style.display = estaAberto ? 'block' : 'none';
 }
 
-btnMenu.addEventListener('click', aparecer);
-btnMenuX.addEventListener('click', aparecer);
+btnMenu.addEventListener('click', toggleMenu);
+btnMenuX.addEventListener('click', toggleMenu);
+
+
+function fecharMenuAoRolar() {
+  if (estaAberto) {
+    toggleMenu(); 
+  }
+}
+
+document.addEventListener('scroll', fecharMenuAoRolar);
 
