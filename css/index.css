@@ -538,15 +538,16 @@ ul {
   background: #fff;
   margin: 8px;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .btn-menu-x{
-  cursor: pointer;
-  display: none;
-  -webkit-tap-highlight-color: transparent;
-  position: absolute;   
-  top: 1rem;
-  right: 1rem;
+    display: none;
+    top: -0.5rem;
+    right: 0.3rem;
+    position: absolute;     
+    -webkit-tap-highlight-color: transparent;
+
 }
 
 .btn-menu-x .linha1{
@@ -578,29 +579,41 @@ ul {
   height: 200px;
 }
 
-.menu_mobile .abrir{
-  display: block; 
-}
-
-.open {
-  display: flex;
-  overflow-x: hidden;
-}
-
-body.fixo{
-  overflow: hidden;
-}
-
 .fechar{
   display: none;
 } 
 
-.remover{
-  display: none;
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.itemremover{
-  display: none;
+.menu_mobile {
+  display: none; /* Inicialmente oculto */
+  animation: slideDown 0.5s ease-out forwards;
+}
+
+.menu_mobile.visible {
+  display: block; /* Exibe quando a classe 'visible' é adicionada */
+}
+
+.menu_mobile {
+  display: none; 
+  right: 1.3rem;
+  align-items: center;
+  text-align: center ;
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.menu_mobile li{
+  left: 2rem;
+  top: 2rem;
 }
 
 .titulo h2{
