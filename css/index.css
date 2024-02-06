@@ -341,11 +341,14 @@ z-index: -1;
   position: relative;
   left: 38.1rem;
   padding-left:6px;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
 }
 
 .link-btn-cardapio{
   width: 1rem;
   display: block;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .btn-cardapio:hover{
@@ -409,11 +412,14 @@ iframe{
   width: 9.7rem;
   position: relative;
   padding-left:10px;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
 }
 
 .link_btn_contato{
   width: 1rem;
   display: block;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .btn_contato:hover{
@@ -595,12 +601,12 @@ ul {
 }
 
 .menu_mobile {
-  display: none; /* Inicialmente oculto */
+  display: none;
   animation: slideDown 0.5s ease-out forwards;
 }
 
 .menu_mobile.visible {
-  display: block; /* Exibe quando a classe 'visible' é adicionada */
+  display: block; 
 }
 
 .menu_mobile {
@@ -608,7 +614,6 @@ ul {
   right: 1.3rem;
   align-items: center;
   text-align: center ;
-  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .menu_mobile li{
@@ -750,12 +755,17 @@ span{
     left: 7rem;
     top: 1rem;
     font-weight: 500;
+    padding: 16px 8px;
   }
   
   .link-btn-cardapio{
     display: block;
     width: 9.7rem;
     padding-left:10px;
+  }
+
+  .btn-cardapio b {
+    font-size: 1.1rem;
   }
   
   .btn-cardapio:hover{
