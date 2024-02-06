@@ -5,24 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/cardapio.css">
     <link rel="icon" href="img/comida-rapida.ico" type="image/x-icon">
+    <script src="main.js" defer></script>
+
     <title>Cardapio</title>
 </head>
 <body>
-    <div class="menu">
-        <nav>
-            <h1>
-                <a href="index.html" >
-                Jhow burguer
-            </a>
-            </h1>
-            <ul>
+        <div class="header">
 
+            <div class="btn-menu">
+    
+                <div class="linha1"></div>
+                <div class="linha2"></div>
+                <div class="linha3"></div>
+      
+            </div>
+      
+            <div class="btn-menu-x">
+      
+              <div class="linha1"></div>
+              <div class="linha2"></div>
+          </div>
+    
+            <div class="menu">
+                <nav>
+                    <h1>
+                        <a href="index.html" >
+                        Jhow burguer
+                    </a>
+                    </h1>
+                    <ul>
+        
+                        <li>
+                            <a href="index.html">
+                              A hamburgueria
+                        </a>
+                        </li>
+        
+                        <li>
+                            <a href="cardapio.html">
+                             Cardápio
+                        </a>
+                        </li>
+        
+                        <li>
+                            <a href="contato.html">
+                             Contato
+                        </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+    
+            <div class="menu_mobile">
                 <li>
                     <a href="index.html">
                       A hamburgueria
                 </a>
                 </li>
-
+        
                 <li>
                     <a href="cardapio.html">
                      Cardápio
@@ -34,9 +74,10 @@
                      Contato
                 </a>
                 </li>
-            </ul>
-        </nav>
-    </div>
+            </div>
+    
+        </div>
+    
 
     <div class="fundo">
 
@@ -62,19 +103,19 @@
       <div class="cardapio">
 
         <div class="menu_cardapio">
-            <a href="#cardapio_part_burguer">
+            <a href="#cardapio_part_burguer" id="burger">
                 Burguer
             </a>
 
-            <a href="#cardapio_part_combo">
+            <a href="#cardapio_part_combo" id="combo">
                 Combo burguer
             </a>
 
-            <a href="#cardapio_part_combo_familia">
+            <a href="#cardapio_part_combo_familia" id="familia">
                 Combo familia
             </a>
 
-            <a href="#cardapio_part_bebida">
+            <a href="#cardapio_part_bebida" id="bebidas">
                 Bebidas
             </a>
         </div>

@@ -19,6 +19,7 @@ ocultar.forEach((Element) => observador.observe(Element));
 const btnMenu = document.querySelector('.btn-menu');
 const btnMenuX = document.querySelector('.btn-menu-x');
 const menuMobile = document.querySelector('.menu_mobile');
+const titulo = document.querySelector('h2')
 
 // Variável para controlar o estado do menu
 let estaAberto = false;
@@ -30,6 +31,7 @@ function toggleMenu() {
   btnMenu.style.display = estaAberto ? 'none' : 'block';
   btnMenuX.style.display = estaAberto ? 'block' : 'none';
   menuMobile.style.display = estaAberto ? 'block' : 'none';
+
 }
 
 btnMenu.addEventListener('click', toggleMenu);
