@@ -9,7 +9,7 @@ const observador = new IntersectionObserver( (info) =>{
   } 
  })
 })   
-
+ 
 //fazer uma lista dos elementos e passar pelo observador
 ocultar.forEach((Element) => observador.observe(Element));
 
